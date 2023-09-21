@@ -23,3 +23,12 @@ class Pokemon(db.Model):
     # relationship
     item = db.relationship("Item", back_populates = "pokemon")
     pokemon_type = db.relationship("Type", back_populates = "pokemon")
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "imageUrl": self.img_url,
+            "number": self.number,
+            "name": self.name,
+            "captured": self.captured
+       }
