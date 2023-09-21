@@ -9,11 +9,10 @@ def seed_pokemon():
         name='Bulbasaur',
         attack=49,
         defense=49,
-        type='grass',
-        moves=[
-          'tackle',
-          'vine whip'
-        ],
+        type_id='grass',
+        moves='tackle, whip something',
+        # encounter_rate=1.00,
+        # catch_rate=1.00,
         captured=True
     )
     db.session.add(pokemon1)
