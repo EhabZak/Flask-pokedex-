@@ -1,7 +1,16 @@
 
 # import statement for CSRF
 from flask_wtf.csrf import CSRFProtect, generate_csrf
+from flask import Flask, render_template, redirect
+from .config import Configuration
+import os
+from .routes.pokemon import pokemon
 
+
+#/////////////////////////////////////////////////
+app = Flask(__name__)
+app.config.from_object(Configuration)
+app.register_blueprint(pokemon, url_prefix= "/api/pokemon")
 
 
 # after request code for CSRF token injection
