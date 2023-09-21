@@ -5,11 +5,11 @@ from flask import Flask, render_template, redirect
 from .config import Configuration
 import os
 from .routes.pokemon import pokemon
-from .models.db import db
 from flask_migrate import Migrate
+from .models.db import db
 from .models.pokemon import Pokemon
 from .models.item import Item
-from .models.pokemon_type import types
+from .models.pokemon_type import Type
 
 
 #/////////////////////////////////////////////////

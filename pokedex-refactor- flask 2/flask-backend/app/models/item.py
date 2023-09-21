@@ -9,8 +9,8 @@ class Item(db.Model):
     name = db.Column(db.String(255), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     pokemon_id = db.Column(db.Integer, db.ForeignKey("pokemons.id"), nullable=False)
-    created_at = db.Column(db.Date, default=datetime)
-    updated_at = db.Column(db.Date, default=datetime)
+    # created_at = db.Column(db.Date, default=datetime)
+    # updated_at = db.Column(db.Date, default=datetime)
 
     # relationship
     pokemon = db.relationship("Pokemon", back_populates = "item")
