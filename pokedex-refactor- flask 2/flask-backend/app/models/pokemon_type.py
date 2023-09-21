@@ -25,4 +25,4 @@ class Type(db.Model):
     pokemon_type = db.Column(db.String, nullable=False)
 
     # relationship
-    pokemon = db.Relationship("Pokemon", back_populates = "type")
+    pokemon = db.Relationship("Pokemon", back_populates = "pokemon_type")

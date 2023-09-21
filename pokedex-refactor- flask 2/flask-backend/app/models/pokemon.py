@@ -22,4 +22,4 @@ class Pokemon(db.Model):
 
     # relationship
     item = db.relationship("Item", back_populates = "pokemon")
-    type = db.relationship("Type", back_populates = "pokemon")
+    pokemon_type = db.relationship("Type", back_populates = "pokemon")

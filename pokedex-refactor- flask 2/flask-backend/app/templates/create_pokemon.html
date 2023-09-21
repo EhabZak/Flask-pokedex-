@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Form</title>
+</head>
+<body>
+  <form action="/create-pokemon" method="POST">
+
+    {{ form.csrf_token}}
+    <div>{{form.number.label}}: {{form.number}}</div>
+    <div>{{form.attack.label}}: {{form.attack}}</div>
+    <div>{{form.defense.label}}: {{form.defense}}</div>
+    <div>{{form.img_url.label}}: {{form.img_url}}</div>
+    <div>{{form.name.label}}: {{form.name}}</div>
+    <div>{{form.type_id.label}}: {{form.type_id}}</div>
+    <div>{{form.moves.label}}: {{form.moves}}</div>
+    <div>{{form.encounter_rate.label}}: {{form.encounter_rate}}</div>
+    <div>{{form.catch_rate.label}}: {{form.catch_rate}}</div>
+    <div>{{form.captured.label}}: {{form.captured}}</div>
+    <div>{{form.submit}}</div>
+  </form>
+</body>
+</html>
