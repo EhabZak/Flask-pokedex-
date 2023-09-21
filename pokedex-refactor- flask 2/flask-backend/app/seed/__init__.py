@@ -5,18 +5,12 @@ from .pokemon_types import seed_pokemon_types, undo_types
 
 seed_commands = AppGroup("seed")
 
-
 @seed_commands.command("all")
 def seed():
-    # pokemon = seed_pokemon()
-    # items = seed_items()
-    # type = seed_pokemon_types()
     seed_pokemon()
     seed_items()
     seed_pokemon_types()
     print("In here we will run our seed functions")
-
-
 
 @seed_commands.command("undo")
 def undo():

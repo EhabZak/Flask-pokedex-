@@ -12,7 +12,7 @@ class Pokemon(db.Model):
     name = db.Column(db.String(255), nullable=False, unique=True)
     # type = db.Column(db.String, nullable=False)
     # type = db.Column(db.Enum(types), nullable=False)
-    # type_id = db.Column(db.String, db.ForeignKey("types.id"), nullable=False)
+    type_id = db.Column(db.String, db.ForeignKey("types.id"), nullable=False)
     moves = db.Column(db.String(255), nullable=False)
     encounter_rate = db.Column(db.Float, nullable=False, default=1.00)
     catch_rate = db.Column(db.Float, nullable=False, default=1.00)
